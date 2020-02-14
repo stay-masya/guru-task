@@ -22,7 +22,8 @@ class ProjectContainer extends Component {
                          lastChangeDate={this.props.lastChangeDate}
                          commitCounter={this.props.commitCounter}
                          avatar={this.props.avatar}
-                         description={this.props.description}/>
+                         description={this.props.description}
+                         team={this.props.team}/>
             </>
         )
     }
@@ -36,6 +37,7 @@ let mapStateToProps = (state) => {
         commitCounter: state.projectReducer.commitCounter,
         avatar: state.projectReducer.avatar,
         description: state.projectReducer.description,
+        team: state.teamReducer.team,
     }
 };
 

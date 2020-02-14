@@ -13,7 +13,6 @@ export const getUsersAC = (team) => {
 
 //DISPATCH
 export const getUsers = (value) => {
-    debugger
     return (dispatch) => {
         API.getUsers(value)
             .then(response => {
@@ -29,7 +28,6 @@ let initialState = {
 };
 
 const teamReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
 
         case GET_USERS: {
