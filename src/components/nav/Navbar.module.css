@@ -1,0 +1,17 @@
+.nav {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #007bff;
+    min-width: 30px;
+    /*max-width: 50px;*/
+}
+
+.nav a {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.icon {
+    max-width: 23px;
+}
