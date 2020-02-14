@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Team.module.css'
 import InfiniteScroll from "react-infinite-scroll-component";
 import {Button, Card, Col, Row} from "react-bootstrap";
-
+import Preloader from "../preloader/Preloader";
 
 
 const Team = (props) => {
     return (
-        <div>
+        <div className={`shadow ${s.canvas}`}>
             <InfiniteScroll
                 dataLength={props.team.length}
                 next={props.fetchMoreData}
@@ -16,7 +16,8 @@ const Team = (props) => {
             >
                 <h2>Team</h2>
                 <Row>
-                    {props.team.map(t =>
+                    {props.team.length > 0?
+                        props.team.map(t =>
                         <Col key={t.id}>
                             <Card className={s.card} style={{width: '18rem'}}>
                                 <a href="/project"><Card.Img variant="top" src={t.avatar_url}/></a>
@@ -30,10 +31,12 @@ const Team = (props) => {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    )}
+                    )
+                        :<Preloader/>}
                 </Row>
             </InfiniteScroll>
         </div>
     )
 };
+
 export default Team;

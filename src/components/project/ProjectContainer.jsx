@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import Project from "./Project";
-import projectReducer, {getProjectField} from "../../redux/reducers/project-reducer";
+import {getProjectField} from "../../redux/reducers/project-reducer";
+import {getUsers} from "../../redux/reducers/team-reducer";
 
 
 class ProjectContainer extends Component {
@@ -23,7 +24,8 @@ class ProjectContainer extends Component {
                          commitCounter={this.props.commitCounter}
                          avatar={this.props.avatar}
                          description={this.props.description}
-                         team={this.props.team}/>
+                         team={this.props.team}
+                         getUsers={this.props.getUsers}/>
             </>
         )
     }
@@ -41,4 +43,4 @@ let mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, {getProjectField})(ProjectContainer)
+export default connect(mapStateToProps, {getProjectField, getUsers})(ProjectContainer)

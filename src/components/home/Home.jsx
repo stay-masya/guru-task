@@ -1,12 +1,10 @@
 import React from 'react';
-import {Button} from "react-bootstrap";
 
 
 const  Home=(props) =>{
     return(
         <>
-            <div>Home</div>
-            <Button variant="primary">DAAA!!!!!!</Button>
+            <h2>Home page misses the layout</h2>
         </>
     )
 };

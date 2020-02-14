@@ -16,7 +16,6 @@ export const getUsers = (value) => {
     return (dispatch) => {
         API.getUsers(value)
             .then(response => {
-                console.log('aaaaaa', response);
                 dispatch(getUsersAC(response))
             })
     };
