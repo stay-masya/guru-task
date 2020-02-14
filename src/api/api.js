@@ -1,6 +1,6 @@
 export const API = {
-    async getUsers() {
-        const url = "https://api.github.com/repos/vuejs/vue/contributors";
+    async getUsers(page=1) {
+        const url = `https://api.github.com/repos/vuejs/vue/contributors?page=${page}`;
         const response = await fetch(url);
         return await response.json();
     },

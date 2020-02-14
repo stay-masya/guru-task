@@ -12,10 +12,12 @@ export const getUsersAC = (team) => {
 };
 
 //DISPATCH
-export const getUsers = () => {
+export const getUsers = (value) => {
+    debugger
     return (dispatch) => {
-        API.getUsers()
+        API.getUsers(value)
             .then(response => {
+                console.log('aaaaaa', response);
                 dispatch(getUsersAC(response))
             })
     };
@@ -27,12 +29,13 @@ let initialState = {
 };
 
 const teamReducer = (state = initialState, action) => {
+    debugger
     switch (action.type) {
 
         case GET_USERS: {
             return {
                 ...state,
-                team: action.team
+                team: state.team.concat(action.team)
             };
         }
 

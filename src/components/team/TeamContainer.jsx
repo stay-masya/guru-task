@@ -7,18 +7,25 @@ import {getUsers} from "../../redux/reducers/team-reducer";
 class TeamContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            pageCounter: 0
+        };
     }
 
+    fetchMoreData = () => {
+        this.state.pageCounter++;
+        this.props.getUsers(this.state.pageCounter)
+    };
 
     componentDidMount() {
-        this.props.getUsers()
+        this.fetchMoreData()
     }
 
     render() {
         return (
             <>
-                <Team team={this.props.team}/>
+                <Team team={this.props.team}
+                      fetchMoreData={this.fetchMoreData}/>
             </>
         )
     }
