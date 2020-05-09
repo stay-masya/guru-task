@@ -1,15 +1,21 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Button, Card} from "react-bootstrap";
+=======
+import {Card} from "react-bootstrap";
+>>>>>>> parent of 8fe1235... Connected the carousel, but it is not spinning yet :)
 import s from './Project.module.css'
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
-import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 
 
 const Project = (props) => {
+<<<<<<< HEAD
     return (
         <div className={`shadow ${s.canvas}`}>
             <div className={`${s.cardContainer}`}>
+=======
+    return (<>
+            <div className={`shadow ${s.cardContainer}`}>
+>>>>>>> parent of 8fe1235... Connected the carousel, but it is not spinning yet :)
                 <Card className="bg-dark text-white" style={{width: '24rem'}}>
                     <Card.Img src={props.avatar} alt="Card image"/>
                 </Card>
@@ -29,6 +35,7 @@ const Project = (props) => {
                     </Card.Body>
                 </Card>
             </div>
+<<<<<<< HEAD
             <OwlCarousel
                 items="3"
                 className="owl-theme"
@@ -55,6 +62,9 @@ const Project = (props) => {
                 }
             </OwlCarousel>
         </div>
+=======
+        </>
+>>>>>>> parent of 8fe1235... Connected the carousel, but it is not spinning yet :)
     )
 };
 

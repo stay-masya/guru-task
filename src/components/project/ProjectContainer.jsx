@@ -23,9 +23,13 @@ class ProjectContainer extends Component {
                          lastChangeDate={this.props.lastChangeDate}
                          commitCounter={this.props.commitCounter}
                          avatar={this.props.avatar}
+<<<<<<< HEAD
                          description={this.props.description}
                          team={this.props.team}
                          getUsers={this.props.getUsers}/>
+=======
+                         description={this.props.description}/>
+>>>>>>> parent of 8fe1235... Connected the carousel, but it is not spinning yet :)
             </>
         )
     }
@@ -39,7 +43,6 @@ let mapStateToProps = (state) => {
         commitCounter: state.projectReducer.commitCounter,
         avatar: state.projectReducer.avatar,
         description: state.projectReducer.description,
-        team: state.teamReducer.team,
     }
 };
 
